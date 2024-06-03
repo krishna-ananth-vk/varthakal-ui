@@ -1,4 +1,4 @@
-import { Box } from "@mui/joy";
+import { Box, Sheet } from "@mui/joy";
 import NavigationContainer from "./Containers/NavigationContainer/NavigationContainer";
 
 type Props = {
@@ -8,10 +8,18 @@ type Props = {
 const AppContainer = (props: Props) => {
     const { children } = props;
     console.log('appcontainerLoaded', {props})
-    return <>
+    return <Sheet
+    sx={{
+        flexShrink: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100vh',
+    }}
+    >
      <Box
       sx={{
-        flexGrow: 1,
+        flex: 1,
+        overflow: 'scroll'
       }}
     >
 
@@ -25,8 +33,7 @@ const AppContainer = (props: Props) => {
     >
         <NavigationContainer />
     </Box>
-
-    </>
+    </Sheet>
 }
 
 export default AppContainer;

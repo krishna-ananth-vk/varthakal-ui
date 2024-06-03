@@ -4,6 +4,8 @@ import { Suspense } from 'react';
 import { PAGE_ROUTES } from '../utils/constants';
 import NewsPage from '../Pages/NewsPage';
 import PageLoadingAnimation from '../Components/PageLoadingAnimation/PageLoadingAnimation';
+import WeatherPage from '../Pages/WeatherPage';
+import AccountPage from '../Pages/AccountPage';
 
 
 const Routes = () => {
@@ -20,8 +22,16 @@ const Routes = () => {
                         )}
                     >
                         <Route 
-                        path={PAGE_ROUTES.NEWS}
-                        component={NewsPage}
+                            path={PAGE_ROUTES.NEWS}
+                            component={NewsPage}
+                        />
+                        <Route 
+                            path={PAGE_ROUTES.WEATHER}
+                            component={WeatherPage}
+                        />
+                        <Route 
+                            path={PAGE_ROUTES.ACCOUNT}
+                            component={AccountPage}
                         />
                     </Suspense>
                 </AppContainer>

@@ -20,24 +20,23 @@ const NavigationContainer = () =>{
     return(
         <div>
         <Tabs
-        size="lg"
-        value={route}
-        onChange={(_event, value) => handleRouteChange(value as RouteName)}
-        sx={(theme) => ({
-            width: '100vw',
-            mx: '0',
-            boxShadow: theme.shadow.sm,
-            [`& .${tabClasses.root}`]: {
-              py: 1,
-              flex: 1,
-              transition: '0.3s',
-              fontWeight: 'md',
-              fontSize: 'md',
-              [`&:not(.${tabClasses.selected}):not(:hover)`]: {
-                opacity: 0.7,
-              },
-            },
-          })}
+            size="lg"
+            value={route}
+            onChange={(_event, value) => handleRouteChange(value as RouteName)}
+            sx={(theme) => ({
+                width: '100vw',
+                mx: '0',
+                boxShadow: theme.shadow.sm,
+                [`& .${tabClasses.root}`]: {
+                flex: 1,
+                transition: '0.3s',
+                fontWeight: 'md',
+                fontSize: 'md',
+                [`&:not(.${tabClasses.selected}):not(:hover)`]: {
+                    opacity: 0.7,
+                },
+                },
+            })}
         >
         <TabList
             variant="plain"
