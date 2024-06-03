@@ -1,4 +1,4 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import AppContainer from '../AppContainer';
 import { Suspense } from 'react';
 import { PAGE_ROUTES } from '../utils/constants';
@@ -7,13 +7,18 @@ import PageLoadingAnimation from '../Components/PageLoadingAnimation/PageLoading
 
 
 const Routes = () => {
+    const location = useLocation();
     return (
         <div>
              <Route exact path={PAGE_ROUTES.ROOT} component={PageLoadingAnimation} />
             {location.pathname !== PAGE_ROUTES.ROOT && (
             <Switch>
                 <AppContainer>
-                    <Suspense>
+                    <Suspense
+                        fallback={(
+                            <PageLoadingAnimation />
+                        )}
+                    >
                         <Route 
                         path={PAGE_ROUTES.NEWS}
                         component={NewsPage}

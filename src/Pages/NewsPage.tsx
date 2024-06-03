@@ -1,4 +1,4 @@
-import NewsListContainer from "../Containers/NewsListContainer";
+import NewsListContainer from "../Containers/NewsListContainer/NewsListContainer";
 
 const NewsPage = () => (<NewsListContainer />)
 
