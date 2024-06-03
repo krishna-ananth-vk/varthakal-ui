@@ -1,13 +1,17 @@
 import { CssBaseline, CssVarsProvider } from '@mui/joy'
 import './App.css'
+import Routes from './Routes/Routes'
+import { HashRouter } from 'react-router-dom'
 
 function App() {
   
   return (
-   <CssVarsProvider>
+    <HashRouter>
+    <CssVarsProvider>
     <CssBaseline />
-    hi there
-   </CssVarsProvider>
+      <Routes />
+    </CssVarsProvider>
+    </HashRouter>
   )
 }
 
