@@ -16,13 +16,9 @@ const PageLoadingAnimation = () => {
     }, [history]);
     return (
         <div className="animationBody">
-            <div className="animationContainer">
-                <div className="box1" />
-                <div className="box2" />
-                <div className="box3" />
-            </div>
-        </div>
-
+        <div className="loader"></div>
+        
+    </div>
     );
 };
 
