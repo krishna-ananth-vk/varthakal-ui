@@ -57,4 +57,13 @@ export default defineConfig({
   plugins: [react(),
     VitePWA(manifestForPlugin)
   ],
+  server: {
+    proxy: {
+      '/weather': {
+        target: 'https://varthakal.xyz/',
+        secure: false,
+      },
+    },
+    port: 3000,
+  },
 })
