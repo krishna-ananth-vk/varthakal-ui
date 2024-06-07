@@ -1,4 +1,4 @@
-const baseUrl = 'https:varthakal.xyz'
+const baseUrl = 'https://varthakal.xyz'
 const weatherContext = '/weather'
 
 const weatherWithBase = `${baseUrl}${weatherContext}`
